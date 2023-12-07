@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expert Profile</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+  .container { width: 80%; margin: auto; }
+  header, section { padding: 30px 0; }
+  nav { background: #333; padding: 10px 0; color: white; }
+  nav ul { list-style: none; padding: 0; text-align: center; color: white; }
+  nav ul li { display: inline; }
+  nav ul li a { color: white; text-decoration: none; padding: 15px 20px; }
+  h1, h2 { color: #0056b3; }
+  .bio, .cv, .portfolio, .contact { margin-bottom: 30px; }
+  footer { background: black; color: white; text-align: center; padding: 20px 0; }
+  label, textarea { display: block; width: 100%; }
+  input, textarea { margin-bottom: 20px; padding: 10px; }
+  .button { background: #f60; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+</style>
+<script>
+  var Body = {
+      setColor:function(color) {
+          document.querySelector('body').style.color= color;
+      },
+      setBackgroundColor:function(color) {
+          document.querySelector('body').style.backgroundColor= color;
+      }
+  }
+  var Nav = {
+      setColor:function(color) {
+      var nav = document.querySelectorAll('nav')
+      var i=0
+      while (i < nav.length){
+            nav[i].style.color = color;
+            i=i+1;}
+    }
+  }
+  function dayNightHandler(self){
+      var target = document.querySelector('body');
+      if(self.value==='night'){
+          Body.setBackgroundColor('black');
+          Body.setColor('white');
+          self.value='day';
+          Links.setColor('powderblue');
+          Nav.setBackgroundColor('black');
+          Nav.setColor('white');
+      } else {
+          Body.setBackgroundColor('white');
+          Body.setColor('black');
+          self.value='night';
+          Links.setColor('blue');
+          Nav.setBackgroundColor('white');
+          Nav.setColor('black');
+      }
+  }
+</script>
+</head>
+<body>
+<header class="container">
+  <h1>홍용기 컨설팅학 박사</h1>
+  <span>데이터분석 전문가 - Turning Data into Insight! <input type="button" value="night" onclick="
+    dayNightHandler(this);
+    "></span>
+</header>
+<nav>
+  <ul>
+    <li><a href="#bio">Biography</a></li>
+    <li><a href="#cv">Professional area</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="bio" class="container">
+  <span>
+    <h2>About Me</h2>
+    <ul>
+      <li>현 (주)제타데이터 대표이사</li>
+      <li>현 (주)지구파트너스 액셀러레이터 감사</li>
+      <li>현 (주)메타로직 ISP 컨설팅 수석컨설턴트</li>
+      <li>현 (주)이너피플 이사</li>
+      <li>전 (사)한국자동차부품협회 수석컨설턴트</li>
+      <li>전 (주)미래경영컨설팅 수석컨설턴트</li>
+    </ul>
+  </span> 
+  <span><img src="smith.jpg" alt="매트릭스 스미스 요원"></span>
+</section>
+<section id="cv" class="container">
+  <h2>Professional area</h2>
+  <p>Management strategy, Marketing, Data analysis, Finance & accounting</p>
+  <a href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bjky&x_csa=%7B%22fromUi%22%3A%22kb%22%7D&pkid=1&os=30887777&qvt=0&query=%ED%99%8D%EC%9A%A9%EA%B8%B0" target="_blank" title="데이터 사이언티스트 홍용기 박사">네이버 인물정보 !<br />
+    <img src="네이버 인물정보.png" alt="NAVER"></a>
+</section>
+<section id="portfolio" class="container">
+  <h2>Portfolio</h2>
+   <ul>
+    <li>ODA Jordan Project</li>
+    <li>데이터가치평가 컨설팅 (중소벤처기업진흥공단)</li>
+    <li>ISP Consulting (창업진흥원, 한국연구재단, 소상공인시장진흥공단, 서울특별시, 경찰대학교)</li>
+    <li>데이터바우처 지원사업수행 PM (KDATA:한국데이터산업진흥원, 2022년~2023년)</li>
+    <li>산업전문인력 AI 역량강화지원사업 (NIPA:정보통신산업진흥원 )</li>
+    <li>안산시 창업생태계 조성사업 및 연구용역 (안산시 & 행정안전부)</li>
+    <li>축산 ICT 융복합확산사업 빅데이터 컨설팅 (농정원)</li>
+    <li>해상풍력발전 사업타당성 및 경제성분석 (H그룹 & 한국선급)</li>
+    <li>초정밀접목로봇보급사업 경제성분석 (농업기술실용화재단)</li>
+    <li>여주대학교 출강 (창업과 경영)</li>
+   </ul>
+</section>
+<section id="contact" class="container">
+  <h2>Contact</h2>
+  <p>email : 123biz@naver.com</p>
+</section>
+<footer>
+  <p>&copy; 2023 YK. Hong - Ph.D</p>
+</footer>
+
+</body>
+</html>
